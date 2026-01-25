@@ -364,26 +364,26 @@ export default function PartnerPage({ params }: { params: Promise<{ partnerId: s
                         </div>
 
                         {/* 브랜드 의미 */}
-                        <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-4 md:gap-8 mb-24">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-24 max-w-6xl mx-auto">
                             {[
                                 { char: "S", label: "SONO", desc: "축적된 자산의 모든 서비스", color: "bg-sono-primary" },
                                 { char: "I", label: "I'M", desc: "고객 맞춤형 서비스", color: "bg-sono-gold" },
                                 { char: "R", label: "READY", desc: "항상 준비된 상태", color: "bg-sono-success" }
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-5 px-5 py-6 md:px-8 md:py-5 bg-white rounded-[24px] shadow-sm border border-gray-50 text-center md:text-left">
-                                    <span className={`w-14 h-14 rounded-[18px] ${item.color} flex items-center justify-center text-white text-xl font-bold shadow-lg`}>
+                                <div key={i} className="flex flex-col md:flex-row items-center gap-4 md:gap-5 px-6 py-8 md:px-8 md:py-7 bg-white rounded-[32px] shadow-sm border border-gray-50 text-center md:text-left transition-all hover:shadow-md">
+                                    <span className={`w-14 h-14 rounded-[18px] ${item.color} flex items-center justify-center text-white text-xl font-bold shadow-lg flex-shrink-0`}>
                                         {item.char}
                                     </span>
                                     <div>
-                                        <p className="text-xs font-bold text-[#8b95a1] mb-0.5">{item.label}</p>
-                                        <p className="font-bold text-sono-dark">{item.desc}</p>
+                                        <p className="text-xs font-bold text-[#8b95a1] mb-1">{item.label}</p>
+                                        <p className="font-bold text-sono-dark text-lg md:text-xl leading-tight">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
                         {/* 주요 성과 카드 */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-24">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-24 max-w-6xl mx-auto">
                             {[
                                 {
                                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />,
@@ -434,7 +434,7 @@ export default function PartnerPage({ params }: { params: Promise<{ partnerId: s
                         </div>
 
                         {/* 인증 배지 */}
-                        <div className="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-12 text-center border border-gray-100 shadow-sm">
+                        <div className="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-12 text-center border border-gray-100 shadow-sm max-w-6xl mx-auto">
                             <h3 className="font-bold text-[#4e5968] text-xl mb-10 tracking-tight">대내외적으로 공인된 신뢰성</h3>
                             <div className="grid grid-cols-1 md:flex md:flex-wrap justify-center gap-4 md:gap-20">
                                 {[
