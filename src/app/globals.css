@@ -273,4 +273,16 @@
   .animate-bounce-short {
     animation: bounce-short 0.5s ease-in-out 1;
   }
+
+  /* 스크롤바 숨기기 */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 }

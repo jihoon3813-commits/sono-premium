@@ -172,7 +172,7 @@ export default function PartnerFormModal({ partner, onClose, onSuccess, isAdmin 
 
     return (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-6">
-            <div className="bg-white rounded-[32px] w-full max-w-2xl max-h-[90vh] overflow-y-auto p-10 shadow-2xl">
+            <div className="bg-white rounded-[32px] w-full max-w-2xl max-h-[90vh] overflow-y-auto p-10 shadow-2xl no-scrollbar">
                 <div className="flex justify-between items-center mb-10">
                     <h2 className="text-2xl font-bold text-sono-dark">
                         {isEdit ? "파트너 정보 수정" : "파트너 신규 등록"}

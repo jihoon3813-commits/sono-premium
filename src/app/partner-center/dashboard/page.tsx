@@ -140,15 +140,25 @@ export default function PartnerDashboard() {
                                 <span className="text-xs font-mono text-gray-500 truncate max-w-[120px] lg:max-w-[200px]">
                                     {baseUrl.replace(/^https?:\/\//, "")}/p/{partner.customUrl}
                                 </span>
-                                <button
-                                    onClick={handleCopyUrl}
-                                    className={`text-[10px] font-bold px-2.5 py-1 rounded-lg transition-all ${copySuccess
-                                        ? "bg-green-500 text-white animate-bounce-short"
-                                        : "bg-gray-200 text-gray-600 hover:bg-sono-primary hover:text-white"
-                                        }`}
-                                >
-                                    {copySuccess ? "복사완료!" : "주소복사"}
-                                </button>
+                                <div className="flex gap-1">
+                                    <button
+                                        onClick={handleCopyUrl}
+                                        className={`text-[10px] font-bold px-2.5 py-1 rounded-lg transition-all ${copySuccess
+                                            ? "bg-green-500 text-white animate-bounce-short"
+                                            : "bg-gray-200 text-gray-600 hover:bg-sono-primary hover:text-white"
+                                            }`}
+                                    >
+                                        {copySuccess ? "복사완료!" : "주소복사"}
+                                    </button>
+                                    <a
+                                        href={`/p/${partner.customUrl}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-gray-200 text-gray-600 hover:bg-sono-primary hover:text-white transition-all"
+                                    >
+                                        바로가기
+                                    </a>
+                                </div>
                             </div>
                         )}
                         <div className="w-px h-8 bg-gray-100 mx-1"></div>
@@ -167,6 +177,36 @@ export default function PartnerDashboard() {
             </header>
 
             <main className="max-w-7xl mx-auto p-4 md:p-8">
+                {/* Mobile URL Display (Visible only on mobile) */}
+                {partner.customUrl && partner.customUrl !== "admin" && (
+                    <div className="md:hidden mb-6 flex items-center justify-between gap-2 bg-white p-4 rounded-[24px] shadow-sm border border-gray-100">
+                        <div className="flex-1 flex flex-col gap-1 overflow-hidden">
+                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">내 파트너 페이지 URL</span>
+                            <span className="text-xs font-mono text-sono-primary truncate">
+                                {baseUrl.replace(/^https?:\/\//, "")}/p/{partner.customUrl}
+                            </span>
+                        </div>
+                        <div className="flex gap-1.5 flex-shrink-0">
+                            <button
+                                onClick={handleCopyUrl}
+                                className={`text-[11px] font-bold px-4 py-2.5 rounded-xl transition-all ${copySuccess
+                                    ? "bg-green-500 text-white animate-bounce-short"
+                                    : "bg-sono-primary/10 text-sono-primary hover:bg-sono-primary hover:text-white"
+                                    }`}
+                            >
+                                {copySuccess ? "복사됨" : "복사"}
+                            </button>
+                            <a
+                                href={`/p/${partner.customUrl}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[11px] font-bold px-4 py-2.5 rounded-xl bg-gray-100 text-gray-500 hover:bg-sono-primary hover:text-white transition-all"
+                            >
+                                이동
+                            </a>
+                        </div>
+                    </div>
+                )}
                 {activeTab === "overview" && (
                     <div className="space-y-6">
                         {/* Status Summary Cards */}
