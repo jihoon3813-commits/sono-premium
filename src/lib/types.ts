@@ -23,6 +23,8 @@ export interface Partner {
     memberCount: string;
     customUrl: string;
     logoUrl: string;
+    logoText?: string;
+    landingTitle?: string;
     pointInfo: string;
     brandColor: string;
     loginId: string;

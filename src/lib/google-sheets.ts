@@ -26,6 +26,8 @@ export const SHEET_HEADERS = {
         'member_count',
         'custom_url',
         'logo_url',
+        'logo_text',
+        'landing_title',
         'point_info',
         'brand_color',
         'login_id',
@@ -178,6 +180,13 @@ export async function getOrCreateSheet(
     } else {
         // 기존 시트 로드 시 헤더 정보 로드
         await sheet.loadHeaderRow();
+
+        // 새로 추가된 헤더가 있는지 확인하고 동기화 (헤더 수가 늘어난 경우에만)
+        const definedHeaders = SHEET_HEADERS[sheetName as keyof typeof SHEET_HEADERS];
+        if (definedHeaders && sheet.headerValues.length < definedHeaders.length) {
+            console.log(`헤더 동기화 진행 중: ${sheetName}`);
+            await sheet.setHeaderRow(definedHeaders);
+        }
     }
 
     return sheet;

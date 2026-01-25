@@ -30,6 +30,9 @@ export default function PartnerFormModal({ partner, onClose, onSuccess, isAdmin 
         shopType: "회원제 쇼핑몰",
         memberCount: "",
         customUrl: "",
+        logoUrl: "",
+        logoText: "",
+        landingTitle: "",
         pointInfo: "",
         loginId: "",
         loginPassword: "",
@@ -51,6 +54,9 @@ export default function PartnerFormModal({ partner, onClose, onSuccess, isAdmin 
                 shopType: partner.shopType || "회원제 쇼핑몰",
                 memberCount: partner.memberCount || "",
                 customUrl: partner.customUrl || "",
+                logoUrl: partner.logoUrl || "",
+                logoText: partner.logoText || "",
+                landingTitle: partner.landingTitle || "",
                 pointInfo: partner.pointInfo || "",
                 loginId: partner.loginId || "",
                 loginPassword: partner.loginPassword || "",
@@ -343,6 +349,41 @@ export default function PartnerFormModal({ partner, onClose, onSuccess, isAdmin 
                                     onChange={(e) => setFormData({ ...formData, pointInfo: e.target.value })}
                                     className="w-full bg-gray-50 border-none rounded-2xl py-3 px-4 text-sm font-medium focus:ring-2 focus:ring-sono-primary"
                                     placeholder="45만 포인트 즉시 지급"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Landing Page Customization */}
+                        <div className="grid grid-cols-2 gap-6 pt-2">
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-gray-400 ml-1">랜딩 타이틀용 업체명 (회원님을 위한... 앞에 표시)</label>
+                                <input
+                                    type="text"
+                                    value={formData.landingTitle}
+                                    onChange={(e) => setFormData({ ...formData, landingTitle: e.target.value })}
+                                    className="w-full bg-gray-50 border-none rounded-2xl py-3 px-4 text-sm font-medium focus:ring-2 focus:ring-sono-primary"
+                                    placeholder="㈜베스트원서브"
+                                />
+                                <p className="text-[10px] text-gray-400 ml-1 mt-1">* 공백 시 파트너 등록 업체명이 표시됩니다.</p>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-bold text-gray-400 ml-1">로고 이미지 URL (왼쪽 로고)</label>
+                                <input
+                                    type="text"
+                                    value={formData.logoUrl}
+                                    onChange={(e) => setFormData({ ...formData, logoUrl: e.target.value })}
+                                    className="w-full bg-gray-50 border-none rounded-2xl py-3 px-4 text-sm font-medium focus:ring-2 focus:ring-sono-primary"
+                                    placeholder="https://..."
+                                />
+                            </div>
+                            <div className="space-y-2 col-span-2">
+                                <label className="text-xs font-bold text-gray-400 ml-1">로고 텍스트 (이미지 URL이 없을 때 표시)</label>
+                                <input
+                                    type="text"
+                                    value={formData.logoText}
+                                    onChange={(e) => setFormData({ ...formData, logoText: e.target.value })}
+                                    className="w-full bg-gray-50 border-none rounded-2xl py-3 px-4 text-sm font-medium focus:ring-2 focus:ring-sono-primary"
+                                    placeholder="파트너사명을 텍스트로 보이고 싶을 때 입력"
                                 />
                             </div>
                         </div>

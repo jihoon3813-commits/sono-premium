@@ -159,6 +159,8 @@ export async function POST(request: Request) {
                 memberCount: partnerData.memberCount || '',
                 customUrl: partnerData.customUrl,
                 logoUrl: partnerData.logoUrl || '',
+                logoText: partnerData.logoText || '',
+                landingTitle: partnerData.landingTitle || '',
                 pointInfo: partnerData.pointInfo || '',
                 brandColor: partnerData.brandColor || '#1e3a5f',
                 loginId: partnerData.loginId,

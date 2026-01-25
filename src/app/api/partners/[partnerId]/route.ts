@@ -24,6 +24,8 @@ export async function GET(
             name: partner.companyName,
             customUrl: partner.customUrl,
             logoUrl: partner.logoUrl,
+            logoText: partner.logoText,
+            landingTitle: partner.landingTitle,
             pointInfo: partner.pointInfo,
             brandColor: partner.brandColor,
         };
