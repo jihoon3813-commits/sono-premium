@@ -96,7 +96,7 @@ export default function SmartCareContent({
             <main className="pb-32"> {/* Add padding for fixed bottom bar */}
                 {/* 히어로 섹션 */}
                 <section
-                    className="relative min-h-[70vh] flex items-center bg-sono-primary overflow-hidden pt-12"
+                    className="relative min-h-[70vh] flex items-center bg-sono-dark overflow-hidden pt-12"
                 >
                     <div className="absolute inset-0 z-0">
                         <img

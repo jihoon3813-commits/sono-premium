@@ -44,7 +44,7 @@ export default function Footer() {
                         <h4 className="font-bold text-sono-dark mb-6">고객지원</h4>
                         <div className="p-6 bg-[#f9fafb] rounded-[24px]">
                             <p className="text-xs font-bold text-[#8b95a1] mb-2">파트너 제휴 문의</p>
-                            <p className="text-2xl font-bold text-sono-primary mb-1">1588-0000</p>
+                            <p className="text-2xl font-bold text-sono-primary mb-1">1588-0883</p>
                             <p className="text-xs font-medium text-[#adb5bd]">평일 09:00 - 18:00 (주말/공휴일 휴무)</p>
                         </div>
                     </div>

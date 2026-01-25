@@ -30,7 +30,7 @@ export default function Happy450Content({
             <main>
                 {/* 히어로 섹션 */}
                 <section
-                    className="relative min-h-[70vh] flex items-center bg-sono-primary overflow-hidden pt-12"
+                    className="relative min-h-[70vh] flex items-center bg-sono-dark overflow-hidden pt-12"
                     style={{
                         backgroundImage: 'url("https://raw.githubusercontent.com/jihoon3813-commits/img_sono/ba129da43419b13c6e6fe3df92fc852b3f2e6abf/Generated%20Image%20January%2022%2C%202026%20-%205_16PM.jpeg")',
                         backgroundSize: 'cover',

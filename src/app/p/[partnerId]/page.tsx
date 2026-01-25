@@ -290,7 +290,7 @@ export default function PartnerPage({ params }: { params: Promise<{ partnerId: s
             <main className="min-h-screen bg-[#f2f4f6]">
                 {/* 히어로 */}
                 <section
-                    className="relative py-20 md:py-40 overflow-hidden pt-12 bg-sono-primary flex items-center min-h-[60vh]"
+                    className="relative py-20 md:py-40 overflow-hidden pt-12 bg-sono-dark flex items-center min-h-[60vh]"
                     style={{
                         backgroundImage: 'url("https://github.com/jihoon3813-commits/img_sono/blob/main/Generated%20Image%20January%2024,%202026%20-%2010_30AM.jpeg?raw=true")',
                         backgroundSize: 'cover',

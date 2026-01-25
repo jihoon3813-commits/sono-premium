@@ -8,7 +8,7 @@ export default function HomePage() {
             <main>
                 {/* 히어로 섹션 */}
                 <section
-                    className="relative min-h-[95vh] flex items-center bg-sono-primary overflow-hidden pt-12"
+                    className="relative min-h-[95vh] flex items-center bg-sono-dark overflow-hidden pt-12"
                     style={{
                         backgroundImage: 'url("https://raw.githubusercontent.com/jihoon3813-commits/img_sono/ba129da43419b13c6e6fe3df92fc852b3f2e6abf/Generated%20Image%20January%2022%2C%202026%20-%203_23PM.jpeg")',
                         backgroundSize: 'cover',
@@ -94,7 +94,7 @@ export default function HomePage() {
                             <h2 className="section-title leading-tight">
                                 대명소노그룹의<br className="block md:hidden" /> 라이프케어 브랜드
                             </h2>
-                            <p className="section-subtitle max-w-3xl mx-auto">
+                            <p className="section-subtitle max-w-5xl mx-auto break-keep">
                                 &quot;인생의 모든 순간이 준비될 때까지&quot;<br />
                                 40년 이상의 레저 사업 노하우를 바탕으로 고객의 삶을 더욱 풍요롭게 만드는 토탈 라이프케어 서비스를 제공합니다.
                             </p>
