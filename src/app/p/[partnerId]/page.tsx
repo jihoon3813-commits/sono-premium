@@ -356,7 +356,7 @@ export default function PartnerPage({ params }: { params: Promise<{ partnerId: s
                     <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
                         <div className="text-center mb-24">
                             <span className="badge-primary mb-6 px-4 py-2">ABOUT US</span>
-                            <h2 className="section-title">대명소노그룹의 라이프케어 브랜드</h2>
+                            <h2 className="section-title">대명소노그룹의<br className="md:hidden" /> 라이프케어 브랜드</h2>
                             <p className="section-subtitle max-w-3xl mx-auto">
                                 &quot;인생의 모든 순간이 준비될 때까지&quot;<br />
                                 40년 이상의 레저 사업 노하우를 바탕으로 고객의 삶을 더욱 풍요롭게 만드는 토탈 라이프케어 서비스를 제공합니다.
