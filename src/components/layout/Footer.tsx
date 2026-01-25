@@ -1,0 +1,63 @@
+import Link from "next/link";
+
+export default function Footer() {
+    return (
+        <footer className="bg-white border-t border-gray-100 py-20">
+            <div className="max-w-[1200px] mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                    {/* Brand Info */}
+                    <div className="md:col-span-4">
+                        <div className="flex items-center mb-6">
+                            <img
+                                src="https://github.com/jihoon3813-commits/img_sono/blob/main/%EC%86%8C%EB%85%B8%EC%95%84%EC%9E%84%EB%A0%88%EB%94%94%20BI_3.png?raw=true"
+                                alt="SONO I'M READY"
+                                className="h-7 w-auto object-contain grayscale opacity-80"
+                            />
+                        </div>
+                        <p className="text-[#6b7684] font-medium text-sm leading-relaxed mb-8 break-keep">
+                            대한민국 상조업계 2위 소노아임레디와 함께하는 제휴 파트너 플랫폼입니다.
+                            회원제 쇼핑몰을 위한 새로운 수익 창출 기회를 제공합니다.
+                        </p>
+                        <div className="space-y-1.5 text-xs font-bold text-[#adb5bd]">
+                            <p className="text-sono-dark text-base font-bold mb-2">(주)라이프앤조이 | 소노아임레디 공식총판</p>
+                            <p>경기도 하남시 미사대로 510, 624호(아이에스비즈타워) <span className="mx-2 opacity-30">|</span> 사업자등록번호 : 388-86-02921</p>
+                            <p>E-mail : lifenjoy0296@gmail.com <span className="mx-2 opacity-30">|</span> 개인정보보호책임자 : 이지건(lifenjoy0108@gmail.co.kr)</p>
+                        </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="md:col-span-2">
+                        <h4 className="font-bold text-sono-dark mb-6">서비스</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/products/happy450" className="text-sm font-bold text-[#8b95a1] hover:text-sono-primary transition-colors">상품 안내</Link></li>
+                            <li><Link href="/partner/apply" className="text-sm font-bold text-[#8b95a1] hover:text-sono-primary transition-colors">제휴 프로세스</Link></li>
+                        </ul>
+                    </div>
+                    <div className="md:col-span-2">
+                        <h4 className="font-bold text-sono-dark mb-6">비즈니스</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="/partner/apply" className="text-sm font-bold text-[#8b95a1] hover:text-sono-primary transition-colors">파트너 신청</Link></li>
+                            <li><Link href="/partner-center" className="text-sm font-bold text-[#8b95a1] hover:text-sono-primary transition-colors">파트너 센터</Link></li>
+                        </ul>
+                    </div>
+                    <div className="md:col-span-4">
+                        <h4 className="font-bold text-sono-dark mb-6">고객지원</h4>
+                        <div className="p-6 bg-[#f9fafb] rounded-[24px]">
+                            <p className="text-xs font-bold text-[#8b95a1] mb-2">파트너 제휴 문의</p>
+                            <p className="text-2xl font-bold text-sono-primary mb-1">1588-0000</p>
+                            <p className="text-xs font-medium text-[#adb5bd]">평일 09:00 - 18:00 (주말/공휴일 휴무)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-gray-50">
+                    <p className="text-xs font-bold text-[#adb5bd]">COPYRIGHT © SINCE 2025 LIFE&JOY CO., LTD. ALL RIGHTS RESERVED.</p>
+                    <div className="flex gap-8">
+                        <Link href="/privacy" className="text-xs font-bold text-[#adb5bd] hover:text-[#6b7684]">개인정보처리방침</Link>
+                        <Link href="/terms" className="text-xs font-bold text-[#adb5bd] hover:text-[#6b7684]">이용약관</Link>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
