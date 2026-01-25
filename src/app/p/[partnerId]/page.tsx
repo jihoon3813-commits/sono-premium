@@ -370,13 +370,13 @@ export default function PartnerPage({ params }: { params: Promise<{ partnerId: s
                                 { char: "I", label: "I'M", desc: "고객 맞춤형 서비스", color: "bg-sono-gold" },
                                 { char: "R", label: "READY", desc: "항상 준비된 상태", color: "bg-sono-success" }
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col md:flex-row items-center gap-4 md:gap-5 px-6 py-8 md:px-8 md:py-7 bg-white rounded-[32px] shadow-sm border border-gray-50 text-center md:text-left transition-all hover:shadow-md">
-                                    <span className={`w-14 h-14 rounded-[18px] ${item.color} flex items-center justify-center text-white text-xl font-bold shadow-lg flex-shrink-0`}>
+                                <div key={i} className="flex items-center gap-4 md:gap-5 px-5 py-5 md:px-8 md:py-7 bg-white rounded-[28px] md:rounded-[32px] shadow-sm border border-gray-50 text-left transition-all hover:shadow-md">
+                                    <span className={`w-12 h-12 md:w-14 md:h-14 rounded-[16px] md:rounded-[18px] ${item.color} flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg flex-shrink-0`}>
                                         {item.char}
                                     </span>
                                     <div>
-                                        <p className="text-xs font-bold text-[#8b95a1] mb-1">{item.label}</p>
-                                        <p className="font-bold text-sono-dark text-lg md:text-xl leading-tight">{item.desc}</p>
+                                        <p className="text-[10px] md:text-xs font-bold text-[#8b95a1] mb-0.5 md:mb-1">{item.label}</p>
+                                        <p className="font-bold text-sono-dark text-base md:text-xl leading-tight">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
