@@ -223,7 +223,7 @@ export default function InquiryModal({
         <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-sono-dark/60 backdrop-blur-sm" onClick={handleClose} />
 
-            <div className="relative bg-white rounded-[32px] shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto animate-slide-up">
+            <div className="relative bg-white rounded-[32px] shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto animate-slide-up no-scrollbar">
                 <div className="sticky top-0 bg-white/80 backdrop-blur-md px-6 md:px-8 py-5 md:py-6 flex items-center justify-between border-b border-gray-50 z-10">
                     <h2 className="text-xl md:text-2xl font-bold text-sono-dark tracking-tight">상담 신청</h2>
                     <button onClick={handleClose} className="p-2 hover:bg-[#f2f4f6] rounded-full transition-colors">
@@ -355,7 +355,7 @@ export default function InquiryModal({
                                     <label className="input-label !text-[#4e5968] !font-bold mb-3 block">가전제품 선택</label>
                                     <div
                                         ref={productListRef}
-                                        className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar"
+                                        className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[300px] overflow-y-auto pr-2 no-scrollbar"
                                     >
                                         <button
                                             type="button"
