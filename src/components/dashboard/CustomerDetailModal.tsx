@@ -137,6 +137,7 @@ export default function CustomerDetailModal({ application, onClose, onUpdate, is
                         <h3 className="text-sm font-bold text-sono-primary mb-3">신청 상품 정보</h3>
                         <div className="space-y-3">
                             <InfoRow label="상품 유형" value={application.productType} />
+                            <InfoRow label="가전제품" value={application.products || '-'} />
                             <InfoRow label="플랜" value={application.planType} />
                             <InfoRow label="문의사항" value={application.inquiry || '-'} />
                             <InfoRow label="선호 시간" value={application.preferredContactTime || '-'} />
